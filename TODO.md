@@ -1,5 +1,9 @@
 # TODO:
 
+- [ ] url:
+  - since this project will be located in _https://ipsitec.es_ check if the url is correct
+  - take a look at `HEAD.astro`
+
 - [ ] DB: (shared) url should be host and live select the protocol
 - [ ] astro: update to 5.0.3
 - [ ] create user: modules tab first
