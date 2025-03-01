@@ -1,4 +1,4 @@
-import { WEBSLAB_PROJECT, WEBSLAB_SITE, WEBSLAB_TOKEN } from "./consts.ts";
+import { WEBSLAB_DOMAIN, WEBSLAB_PROJECT, WEBSLAB_TOKEN } from "./consts.ts";
 
 type File = { type: string; name: string };
 
@@ -20,9 +20,7 @@ modalSave.addEventListener("click", () => {
 	}
 });
 
-heroModal.addEventListener("hero:modal:data", (evt) => {
-  const { detail } = (evt as CustomEvent);
-
+heroModal.addEventListener("hero:modal:data", ({ detail }) => {
 	hero.value = detail;
 	heroPreview.src = detail;
 });
@@ -49,7 +47,9 @@ heroPicker.addEventListener("click", async () => {
 
 			files.forEach((file) => {
 				if (file.type === "image") {
-					values.push(`${WEBSLAB_SITE}${baseurl}${file.name}`);
+					values.push(
+						`https://${WEBSLAB_PROJECT}.${WEBSLAB_DOMAIN}${baseurl}${file.name}`,
+					);
 				}
 			});
 
