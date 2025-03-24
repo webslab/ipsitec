@@ -36,19 +36,16 @@ li a:hover p {
 <BaseLayout
   auth={true}
   admin={false}
-  title="Modules"
+  title="Base modules"
   description="Great content for you">
-
-  <h1 class="mb-4">Base Modules</h1>
-
   <ul
     class="d-flex flex-wrap justify-content-center gap-1 gap-lg-3 m-0 p-0 list-unstyled"
     id="posts-list"></ul>
 </BaseLayout>
 
 <script>
-  import { authService } from '$lib/auth'
-  import type { Module } from '$lib/types'
+  import { authService } from '$lib/services/auth.ts'
+  import type { Module } from '$lib/types.ts'
 
   const postsList = document.getElementById('posts-list')
 
