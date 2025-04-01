@@ -2,7 +2,7 @@
 import '$lib/styles/base.scss'
 
 import { WEBSLAB_DOMAIN, WEBSLAB_PROJECT } from '$lib/consts.ts'
-import brand from '$images/logo-ipsitec-azul-claro.png'
+import logoP from '$images/logo-base-1080_1080.png'
 
 interface Props {
 	title: string;
@@ -14,7 +14,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const {
   title,
   description,
-  image = brand
+  image = logoP
 } = Astro.props;
 ---
 

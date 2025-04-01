@@ -1,6 +1,6 @@
 {
-	"name": "ipsitec",
-  "version": "0.5.2",
+	"name": "base",
+	"version": "0.5.2",
 	"tasks": {
 		"dev": "astro dev",
 		"astro": "astro",

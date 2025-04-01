@@ -101,7 +101,6 @@ SELECT id, title, (
     count(<-visits[where in = ${userId}]) as visits
   FROM module WHERE id INSIDE ${userId}->grants->module;
 `
-
         if (!userId || !wlDatabase) {
           return
         }
